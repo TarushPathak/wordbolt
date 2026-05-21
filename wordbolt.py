@@ -45,7 +45,7 @@ BANNER = rf"""
 
     {c(Colors.GREY, '--------------------------------------------------')}
     {c(Colors.WHITE, f'[ TYPE: Pattern Weaver ]      [ VERSION: {__version__}-LTD ]')}
-    {c(Colors.WHITE, '[ AUTH: TARUSH ADESH PATHAK ] [ SOURCE: SECLISTS ]')}
+    {c(Colors.WHITE, '[ AUTH: TARUSH ADESH PATHAK ] [  SELF-CONTAINED  ]')}
     {c(Colors.GREY, '--------------------------------------------------')}
 """
 
@@ -65,12 +65,10 @@ EPILOG = f"""
 # ─────────────────────────────────────────────
 # CONFIGURATION
 # ─────────────────────────────────────────────
-SECLISTS_BASE = os.path.expanduser("~/SecLists")
+SECLISTS_BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "wordlists")
 
 PROFILES = {
     "indian": {
-        "forenames":  "Usernames/Names/forenames-india-top1000.txt",
-        "surnames":   "Usernames/Names/surnames-india-top1000.txt",
         "keywords":   ["india", "bharat", "desi", "hindi", "mumbai", "delhi"],
     },
     "corporate": {
@@ -308,8 +306,7 @@ def build_parser():
         epilog=EPILOG,
     )
 
-    # SecLists asset flags
-    asset = parser.add_argument_group("SecLists Assets")
+    asset = parser.add_argument_group("Wordlist Assets")
     asset.add_argument("-k", "--keyboard-walks", action="store_true",
                        help="Include keyboard walk patterns")
     asset.add_argument("-c", "--common-creds",   action="store_true",
@@ -400,7 +397,7 @@ def main():
     # ── Indian Forenames Fallback ──────────────────────────────────
     if fields["Names"].upper() == "NA" or fields["Nicknames"].upper() == "NA":
         print(c(Colors.YELLOW, "\n[*] Triggering Indian Forenames Fallback..."))
-        indian_names = load_list("Usernames/Names/forenames-india-top1000.txt")
+        indian_names = load_list("forenames-india-top1000.txt")
         if indian_names:
             seeds.extend(random.sample(indian_names, 40))
         else:
@@ -455,13 +452,13 @@ def main():
 
     if args.keyboard_walks:
         print(c(Colors.YELLOW, "[*] Importing Keyboard Walks..."))
-        walks = load_list("Passwords/Keyboard-Walks/walk-the-line.txt")
+        walks = load_list("walk-the-line.txt")
         final_wordlist.update(walks[:300])
         print(c(Colors.GREY,   f"    → {len(walks[:300])} entries loaded"))
 
     if args.common_creds:
         print(c(Colors.YELLOW, "[*] Importing Common Credentials..."))
-        common = load_list("Passwords/Common-Credentials/10k-most-common.txt")
+        common = load_list("10k-most-common.txt")
         final_wordlist.update(common[:300])
         print(c(Colors.GREY,   f"    → {len(common[:300])} entries loaded"))
 

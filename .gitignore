@@ -5,8 +5,9 @@ __pycache__/
 dist/
 build/
 *.gz
-*.txt
 *.json
+*.txt
+!wordlists/*.txt
 output/
 .vscode/
 .idea/

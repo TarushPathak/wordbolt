@@ -16,7 +16,6 @@
 ## Dependencies
 
 - Python 3.8+
-- [SecLists](https://github.com/danielmiessler/SecLists) (optional, for keyboard walks and common credentials)
 
 ## Installation
 
@@ -24,12 +23,6 @@
 git clone https://github.com/TarushPathak/wordbolt.git
 cd wordbolt
 pip3 install -r requirements.txt
-```
-
-For full functionality, clone SecLists:
-
-```bash
-git clone https://github.com/danielmiessler/SecLists.git ~/SecLists
 ```
 
 ## Usage
@@ -45,7 +38,7 @@ Enter target details when prompted. Use `;` to separate multiple values and `NA`
 ### Command-line flags
 
 ```
-SecLists Assets:
+Wordlist Assets:
   -k, --keyboard-walks  Include keyboard walk patterns
   -c, --common-creds    Include common credential passwords
   --full                Include both -k and -c
