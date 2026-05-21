@@ -21,15 +21,15 @@
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/wordbolt.git
+git clone https://github.com/TarushPathak/wordbolt.git
 cd wordbolt
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 For full functionality, clone SecLists:
 
 ```bash
-git clone https://github.com/danielmiessler/SecLists.git ~/GitTools/SecLists
+git clone https://github.com/danielmiessler/SecLists.git ~/SecLists
 ```
 
 ## Usage
@@ -37,7 +37,7 @@ git clone https://github.com/danielmiessler/SecLists.git ~/GitTools/SecLists
 ### Basic interactive mode
 
 ```bash
-python wordbolt.py
+python3 wordbolt.py
 ```
 
 Enter target details when prompted. Use `;` to separate multiple values and `NA` to skip a field (triggers Indian forename fallback).
@@ -75,16 +75,16 @@ Output:
 
 ```bash
 # Full mode with gamer profile, aggressive mutations
-python wordbolt.py --full --profile gamer --aggressive -o output.txt
+python3 wordbolt.py --full --profile gamer --aggressive -o output.txt
 
 # Lite mode with keyboard walks
-python wordbolt.py -k --lite --min 8 --max 12
+python3 wordbolt.py -k --lite --min 8 --max 12
 
 # Parallel generation with multi-seed combos
-python wordbolt.py --full --combo-depth 2 --parallel -f json -o results.json
+python3 wordbolt.py --full --combo-depth 2 --parallel -f json -o results.json
 
 # Compressed output ready for hashcat
-python wordbolt.py -c --min 10 --max 20 -f hashcat -o wordlist.txt
+python3 wordbolt.py -c --min 10 --max 20 -f hashcat -o wordlist.txt
 ```
 
 ## Output

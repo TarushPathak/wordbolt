@@ -14,7 +14,7 @@ authors = [
 requires-python = ">=3.8"
 
 [project.urls]
-Source = "https://github.com/yourusername/wordbolt"
+Source = "https://github.com/TarushPathak/wordbolt"
 
 [tool.setuptools.packages.find]
 include = ["wordbolt*"]

@@ -65,7 +65,7 @@ EPILOG = f"""
 # ─────────────────────────────────────────────
 # CONFIGURATION
 # ─────────────────────────────────────────────
-SECLISTS_BASE = os.path.expanduser("~/GitTools/SecLists")
+SECLISTS_BASE = os.path.expanduser("~/SecLists")
 
 PROFILES = {
     "indian": {
