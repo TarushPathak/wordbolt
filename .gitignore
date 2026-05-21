@@ -1,0 +1,13 @@
+*.pyc
+__pycache__/
+*.pyo
+*.egg-info/
+dist/
+build/
+*.gz
+*.txt
+*.json
+output/
+.vscode/
+.idea/
+.DS_Store
