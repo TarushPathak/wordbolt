@@ -1,6 +1,6 @@
 # WordBolt
 
-**Personal Pattern Discovery Tool** — A targeted password wordlist generator that weaves personal information, leet-speak mutations, keyboard walks, and temporal patterns into probabilistically ranked candidate lists.
+**Social Engineering Based Wordlist Generator Tool** — A targeted password wordlist generator that weaves personal information, leet-speak mutations, keyboard walks, and temporal patterns into probabilistically ranked candidate lists.
 
 ## Features
 

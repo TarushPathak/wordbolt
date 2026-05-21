@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-WordBolt v8.0 — Personal Pattern Discovery Tool
+WordBolt v8.0 — Social Engineering Based Wordlist Generator Tool
 """
 
 __version__ = "8.0.0"
@@ -301,7 +301,7 @@ def write_output(results, path, fmt, meta):
 def build_parser():
     parser = argparse.ArgumentParser(
         prog="wordbolt",
-        description="WordBolt v8.0 — Personal Pattern Discovery Tool",
+        description="WordBolt v8.0 — Social Engineering Based Wordlist Generator Tool",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=EPILOG,
     )

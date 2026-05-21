@@ -5,7 +5,7 @@ build-backend = "setuptools.backends._legacy:_Backend"
 [project]
 name = "wordbolt"
 version = "8.0.0"
-description = "Personal Pattern Discovery Tool — targeted password wordlist generator"
+description = "Social Engineering Based Wordlist Generator Tool — targeted password wordlist generator"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
